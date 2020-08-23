@@ -77,11 +77,25 @@ class Player:
             raise ex
 
         with f as raw_list:
+            # skip spaces between commas and double quotes 
+            # (otherwise the parser would consider "Australia, US" as two separate rows)
             r = reader(raw_list, skipinitialspace=True)      
             iter_players = iter(r)
+
+            # skip first row (it only contains the name of each column, such as Last Name, Born, etc.)
             next(iter_players)     
 
             for row in iter_players:
+                """
+                Format:
+
+                row[0] -> Last name
+                row[1] -> First name
+                row[2] -> Full name
+                row[3] -> countries
+                row[4] -> born
+                row[5] -> died
+                """
                 players.append(Player(row[0], row[1], row[2], row[3].split(","), row[4], row[5]))
 
         return players
