@@ -76,7 +76,6 @@ class BinarySearch:
         Unlike the previous method, this one does not stop at the first result
         It searches for all players with "last_name" in "l" within the range between "start" and "end" indices
         If at least one player is found it returns a list of players with the results, otherwise returns None
-        Also unlike the previous method, this one has time complexity of O(n) instead of O(logN)
         """
         if start > 0 and start < len(l):
             l = l[start:]
