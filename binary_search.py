@@ -103,9 +103,6 @@ class BinarySearch:
             else:
                 # a player was found
                 results.append(l[mid])
-                
-                # as it is assumed that "l" is sorted, moving left should return the next result(s)
-                l = l[:mid]
 
             iterations += 1      
             mid = len(l)//2
