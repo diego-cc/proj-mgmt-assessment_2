@@ -74,7 +74,6 @@ class Player:
             f = open(file_path, encoding='utf-8', newline='')
         except OSError as ex:
             print(f"Could not open file \"{file_path}\"")
-            return players
             raise ex
 
         with f as raw_list:

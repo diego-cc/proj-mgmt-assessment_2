@@ -65,11 +65,6 @@ class BinarySearch:
             return l[mid]
         return None
 
-        """ if found:
-            Output.print(f'Found: {found}', Colours.green, Colours.lightgrey)
-        else:
-            Output.print(f'Found: {found}', Colours.red, Colours.lightgrey) """
-
     @staticmethod
     def search_all_by_last_name(l:List[Player], last_name:str, start:int = 0, end:int = 1)->Union[List[Player], None]:
         """
@@ -87,7 +82,6 @@ class BinarySearch:
         iterations = 1
         found = False
         results = []
-        original_length = len(l)
 
         print(f'Number of players in the haystack: {len(l)}')
         print(f'Needle: {last_name}\n')

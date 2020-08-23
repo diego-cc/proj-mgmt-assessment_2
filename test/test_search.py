@@ -8,10 +8,13 @@ class SearchTests(unittest.TestCase):
         self.sample_players = [Player('Doe', 'John', 'John Doe')]
 
     def test_open_invalid_csv_file_throws_os_exception(self):
-        players = Player.parse_players('./data/invalid_file.csv')
+        players = []
+        
+        with self.assertRaises(OSError):
+            players = Player.parse_players('./data/invalid_file.csv')
 
+        # confirm that players list is unchanged
         self.assertEqual(players, [])
-        self.assertRaises(OSError)
 
     def test_open_valid_csv_file_parses_list_of_players(self):
         players = Player.parse_players('./data/chess-players.csv')
