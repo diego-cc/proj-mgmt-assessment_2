@@ -42,12 +42,23 @@ class SearchTests(unittest.TestCase):
         self.assertIsNotNone(actual)
         self.assertEqual(expected, actual)
 
-    def test_search_by_last_name_Levin_returns_first_result(self):
+    def test_search_all_by_last_name_Levin_returns_three_results(self):
         self.sample_players = Player.parse_players('./data/chess-players.csv')
         self.sample_players.sort()        
 
-        expected = Player('Levin', 'Alexander', 'Alexander Levin', ['Russia'], '1871', '1929')
-        actual = BinarySearch.search_by_last_name(self.sample_players, 'Levin')
+        expected_length = 3
+        expected_players = (\
+            Player('Levin', 'Naum', 'Naum Levin', ['Ukraine', ' Australia'], '1933', ''), \
+            Player('Levin', 'Jacob', 'Jacob Levin', ['US'], '1904', '?'), \
+            Player('Levin', 'Alexander', 'Alexander Levin', ['Russia'], '1871', '1929'), \
+            )
+
+        actual = BinarySearch.search_all_by_last_name(self.sample_players, 'Levin')
 
         self.assertIsNotNone(actual)
-        self.assertEqual(expected.first_name, actual.first_name)
+        self.assertEqual(expected_length, len(actual))
+
+        if actual:
+            actual = tuple(actual)
+
+        self.assertEqual(expected_players, actual)
