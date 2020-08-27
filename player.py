@@ -21,15 +21,16 @@ class Player:
     died: Union[int, str, None]
         year when the player died (if available)
     """
-    def __init__(\
-        self, \
-        last_name:str, \
-        first_name:str, \
-        full_name:str, \
-        countries:Union[List[str], str] = "US", \
-        born:Union[int, str, None] = None, \
-        died:Union[int, str, None] = None
-        ):
+
+    def __init__(
+            self,
+            last_name: str,
+            first_name: str,
+            full_name: str,
+            countries: Union[List[str], str] = "US",
+            born: Union[int, str, None] = None,
+            died: Union[int, str, None] = None
+    ):
         self.__last_name = last_name
         self.__first_name = first_name
         self.__full_name = full_name
@@ -40,7 +41,7 @@ class Player:
     @property
     def last_name(self):
         return self.__last_name
-    
+
     @property
     def first_name(self):
         return self.__first_name
@@ -61,14 +62,13 @@ class Player:
     def died(self):
         return self.__died
 
-    
     @staticmethod
-    def parse_players(file_path:str)->List:
+    def parse_players(file_path: str) -> List:
         """
         Loads raw players data from a CSV file and adds each one to a list of players
         Raises OSError if the file cannot be opened
         """
-        players:List[Player] = []
+        players: List[Player] = []
 
         try:
             f = open(file_path, encoding='utf-8', newline='')
@@ -79,11 +79,11 @@ class Player:
         with f as raw_list:
             # skip spaces between commas and double quotes 
             # (otherwise the parser would consider "Australia, US" as two separate rows)
-            r = reader(raw_list, skipinitialspace=True)      
+            r = reader(raw_list, skipinitialspace=True)
             iter_players = iter(r)
 
             # skip first row (it only contains the name of each column, such as Last Name, Born, etc.)
-            next(iter_players)     
+            next(iter_players)
 
             for row in iter_players:
                 """
@@ -99,14 +99,14 @@ class Player:
                 players.append(Player(row[0], row[1], row[2], row[3].split(","), row[4], row[5]))
 
         return players
-            
 
     def __str__(self):
         return f'{self.full_name}\nCountries: {self.countries}\nBorn: {self.born}\nDied: {self.died}'
 
     # self == other
     def __eq__(self, other):
-        return (self.last_name, self.first_name, self.full_name, self.countries, self.born, self.died) == (other.last_name, other.first_name, other.full_name, other.countries, other.born, other.died)
+        return (self.last_name, self.first_name, self.full_name, self.countries, self.born, self.died) == (
+            other.last_name, other.first_name, other.full_name, other.countries, other.born, other.died)
 
     # self != other
     def __ne__(self, other):

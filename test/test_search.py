@@ -2,6 +2,7 @@ import unittest
 from player import Player
 from binary_search import BinarySearch
 
+
 class SearchTests(unittest.TestCase):
 
     def setUp(self):
@@ -9,7 +10,7 @@ class SearchTests(unittest.TestCase):
 
     def test_open_invalid_csv_file_throws_os_exception(self):
         players = []
-        
+
         with self.assertRaises(OSError):
             players = Player.parse_players('./data/invalid_file.csv')
 
@@ -37,7 +38,7 @@ class SearchTests(unittest.TestCase):
 
     def test_search_by_last_name_Griffith_found(self):
         self.sample_players = Player.parse_players('./data/chess-players.csv')
-        self.sample_players.sort()        
+        self.sample_players.sort()
 
         expected = Player('Griffith', 'Richard', 'Richard Griffith', ['England'], '1872', '1955')
         actual = BinarySearch.search_by_last_name(self.sample_players, 'Griffith')
@@ -47,12 +48,12 @@ class SearchTests(unittest.TestCase):
 
     def test_search_all_by_last_name_Levin_returns_three_results(self):
         self.sample_players = Player.parse_players('./data/chess-players.csv')
-        self.sample_players.sort()        
+        self.sample_players.sort()
 
         expected_length = 3
-        expected_players = (\
-            Player('Levin', 'Naum', 'Naum Levin', ['Ukraine', ' Australia'], '1933', ''), \
-            Player('Levin', 'Jacob', 'Jacob Levin', ['US'], '1904', '?'), \
+        expected_players = ( \
+            Player('Levin', 'Naum', 'Naum Levin', ['Ukraine', ' Australia'], '1933', ''),
+            Player('Levin', 'Jacob', 'Jacob Levin', ['US'], '1904', '?'),
             Player('Levin', 'Alexander', 'Alexander Levin', ['Russia'], '1871', '1929'), \
             )
 
