@@ -7,12 +7,17 @@ if __name__ == "__main__":
     """
     sample_players = Player.parse_players('./data/chess-players.csv')
     sample_players.sort()
-    last_name = 'Levin'
+    last_name = 'griffith'
 
     results = BinarySearch.search_all_by_last_name(sample_players, last_name)
-    mapped_results = map(lambda p: str(p), results)
 
     print('Results:\n')
 
-    for p in mapped_results:
-        print(p + '\n')
+    if results is not None:
+        mapped_results = map(lambda p: str(p), results)
+
+        for p in mapped_results:
+            print(p + '\n')
+
+    else:
+        print('No results found')

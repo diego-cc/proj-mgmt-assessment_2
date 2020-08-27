@@ -1,0 +1,193 @@
+Could not open file "./data/invalid_file.csv"
+Number of players in the haystack: 1809
+Needle: Levin
+
+Current haystack size: 1809
+Current try:
+Lin Weiguo
+Countries: ['China']
+Born: 1970
+Died: 
+Number of tries so far: 1
+
+Current haystack size: 904
+Current try:
+Martin Severin From
+Countries: ['Denmark']
+Born: 1828
+Died: 1895
+Number of tries so far: 2
+
+Current haystack size: 451
+Current try:
+Dmitry Jakovenko
+Countries: ['Russia']
+Born: 1983
+Died: 
+Number of tries so far: 3
+
+Current haystack size: 225
+Current try:
+Alexey Korotylev
+Countries: ['Russia']
+Born: 1977
+Died: 
+Number of tries so far: 4
+
+Current haystack size: 112
+Current try:
+Salo Landau
+Countries: ['Poland', ' Netherlands']
+Born: 1903
+Died: 1944
+Number of tries so far: 5
+
+Current haystack size: 55
+Current try:
+Konstantin Lerner
+Countries: ['Ukraine']
+Born: 1950
+Died: 2011
+Number of tries so far: 6
+
+Current haystack size: 27
+Current try:
+Shongjian
+Countries: ['China']
+Born: 1939
+Died: 
+Number of tries so far: 7
+
+Current haystack size: 13
+Current try:
+Naum Levin
+Countries: ['Ukraine', ' Australia']
+Born: 1933
+Died: 
+Number of tries so far: 8
+
+Current haystack size: 6
+Current try:
+Grigory Levenfish
+Countries: ['Poland', ' Russia']
+Born: 1889
+Died: 1961
+Number of tries so far: 9
+
+Current haystack size: 2
+Current try:
+Jacob Levin
+Countries: ['US']
+Born: 1904
+Died: ?
+Number of tries so far: 10
+
+Current haystack size: 1
+Current try:
+Alexander Levin
+Countries: ['Russia']
+Born: 1871
+Died: 1929
+Number of tries so far: 11
+
+Found results: True
+Number of players in the haystack: 1
+Needle: Doe
+
+Current haystack size: 1
+Current try:
+John Doe
+Countries: US
+Born: None
+Died: None
+Number of tries so far: 1
+
+Found: True
+Number of players in the haystack: 1809
+Needle: Griffith
+
+Current haystack size: 1809
+Current try:
+Lin Weiguo
+Countries: ['China']
+Born: 1970
+Died: 
+Number of tries so far: 1
+
+Current haystack size: 904
+Current try:
+Martin Severin From
+Countries: ['Denmark']
+Born: 1828
+Died: 1895
+Number of tries so far: 2
+
+Current haystack size: 451
+Current try:
+Dmitry Jakovenko
+Countries: ['Russia']
+Born: 1983
+Died: 
+Number of tries so far: 3
+
+Current haystack size: 225
+Current try:
+Ilya Gurevich
+Countries: ['Ukraine', ' US']
+Born: 1972
+Died: 
+Number of tries so far: 4
+
+Current haystack size: 112
+Current try:
+Alphonse Goetz
+Countries: ['France']
+Born: 1865
+Died: 1934
+Number of tries so far: 5
+
+Current haystack size: 55
+Current try:
+Bernhard Gregory
+Countries: ['Estonia', ' Germany']
+Born: 1879
+Died: 1939
+Number of tries so far: 6
+
+Current haystack size: 27
+Current try:
+James Grundy
+Countries: ['England', ' US']
+Born: 1855
+Died: 1919
+Number of tries so far: 7
+
+Current haystack size: 13
+Current try:
+Vincent Grimm
+Countries: ['Austria', ' Hungary']
+Born: 1800
+Died: 1872
+Number of tries so far: 8
+
+Current haystack size: 6
+Current try:
+Richard Griffith
+Countries: ['England']
+Born: 1872
+Died: 1955
+Number of tries so far: 9
+
+Found: True
+Number of players in the haystack: 1
+Needle: Not Found
+
+Current haystack size: 1
+Current try:
+John Doe
+Countries: US
+Born: None
+Died: None
+Number of tries so far: 1
+
+Found: False

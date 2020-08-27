@@ -37,7 +37,7 @@ class BinarySearch:
             if mid < 1:
                 break
 
-                # too high, take the first half of the list
+            # too high, take the first half of the list
             if l[mid].last_name.lower() > last_name.lower():
                 l = l[:len(l) // 2]
 
