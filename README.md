@@ -1,4 +1,4 @@
-# Project Management - Assessment 1
+# Project Management - Assessment 2
 
 A binary search class was implemented for this assessment. It provides methods to either return the first search result by last name or all search results in a list of chess players available in a CSV file.
 
